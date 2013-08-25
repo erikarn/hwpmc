@@ -55,7 +55,13 @@ dtlb_misses.pl
 
   This implements slide 35 - DLB misses.
 
+alloc_merge_stalls.pl
+alloc_lea_stalls.pl
+
+  These implement slide 36 - "Allocation Stalls."
+
 machine_clears.pl
 
   This implements slide 39 - Machine Clears.
+
 
