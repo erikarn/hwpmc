@@ -76,4 +76,7 @@ machine_clears.pl
 
   This implements slide 39 - Machine Clears.
 
+front_end_stalls.pl
+
+  This implements slide 40 - "Front-End Stalls."
 
