@@ -68,6 +68,10 @@ microcode_assists.pl
   it instead implements the base counter IDQ.MS_UOPS and you trigger
   the cycle count behaviour by using cmask=1.
 
+branch_mispredicts.pl
+
+  This implements slide 38 - "Branch mispredicts."
+
 machine_clears.pl
 
   This implements slide 39 - Machine Clears.
