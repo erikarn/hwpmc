@@ -1,0 +1,61 @@
+These are a set of simple perl scripts that implement the top level
+performance counter work as found in the "Using VTune Amplifier XE on
+2nd generation intel core family" PDF:
+
+http://download-software.intel.com/sites/landingpage/legacy/pdfs/Using_Intel_VTune_Amplifier_XE_on_2nd_Gen_Intel_Core_Family.pdf
+
+cycles_per_instruction.pl
+
+  This implements slide 19 - "Cycles Per Instruction."
+
+  This is the ratio between the number of non-halted clock cycles
+  versus the number of instructions retired.
+
+cycles_spent_memory_access.pl
+cycles_spent_llc_access.pl
+
+  These implement Slide 30 - "Cache Misses".
+
+  cycles_spent_memory_access.pl calculates the % of cycles
+  spent accessing memory - ie, things that aren't in the L3
+  cache (known as the LLC cache.)
+
+  cycles_spent_llc_access.pl calculates the % of cycles
+  spent accessing LLC - ie, things that weren't in L1 or L2
+  cache but are in LLC.
+
+cycles_spent_accessing_data_mod_another_core.pl
+
+  This implements slide 31 - "Contested access."
+
+  This calculates the % of cycles spent accessing data
+  which was modified by another core.  It's also known
+  as "write sharing."
+
+cycles_spent_blocked_due_to_no_store_forwarding.pl
+
+  This implements slide 32 - "Blocked Loads Due To No Store
+  Forwarding."
+
+  This is where there are two memory instructions in the pipeline;
+  a store followed by a load from the same address.  If the store
+  has to go to cache/memory first before being loaded back in for
+  the next instruction, it shows up here.
+
+cache_line_split_cost.pl
+cache_line_split_store_ratio.pl
+
+  These implement slide 33 - "Cache Line Splits."
+
+page_aliasing.pl
+
+  This implements slide 34 - 4k page aliasing.
+
+dtlb_misses.pl
+
+  This implements slide 35 - DLB misses.
+
+machine_clears.pl
+
+  This implements slide 39 - Machine Clears.
+
