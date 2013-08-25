@@ -60,6 +60,14 @@ alloc_lea_stalls.pl
 
   These implement slide 36 - "Allocation Stalls."
 
+microcode_assists.pl
+
+  This implements slide 37 - "Microcode assists."
+
+  Note that FreeBSD doesn't implement IDQ.MS_CYCLES as an aliased PMC name;
+  it instead implements the base counter IDQ.MS_UOPS and you trigger
+  the cycle count behaviour by using cmask=1.
+
 machine_clears.pl
 
   This implements slide 39 - Machine Clears.
