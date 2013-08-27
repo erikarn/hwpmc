@@ -63,7 +63,7 @@ while (<$p>) {
 		my ($clk_val) = $d{$h[$i]};
 		my ($ret_val) = $d{"s/" . $a[1] . "/MEM_LOAD_UOPS_MISC_RETIRED.LLC_MISS"};
 
-		printf "Core %d: LLC_MISS=%d, Unhalted=%d, efficiency=%.2f\n",
+		printf "Core %d: LLC_MISS=%d, Unhalted=%d, % clock cycles spent accessing memory=%.2f\n",
 		    $a[1],
 		    $ret_val,
 		    $clk_val,
