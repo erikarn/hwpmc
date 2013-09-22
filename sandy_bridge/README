@@ -80,3 +80,7 @@ front_end_stalls.pl
 
   This implements slide 40 - "Front-End Stalls."
 
+
+Other scripts:
+
+* cycles_busy_c0.pl - this reports the amount of time busy in C0, rather than halted.
