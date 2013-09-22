@@ -67,7 +67,7 @@ while (<$p>) {
 		    $a[1],
 		    $ret_val,
 		    $clk_val,
-		    ($ret_val * 180) / $clk_val;
+		    (($ret_val * 180) / $clk_val) * 100.0;
 	}
 
 	printf "===\n";
