@@ -83,4 +83,7 @@ front_end_stalls.pl
 
 Other scripts:
 
-* cycles_busy_c0.pl - this reports the amount of time busy in C0, rather than halted.
+* cycles_busy_c0.pl - this reports the amount of time busy in C0, rather than
+  halted.
+* dtlb_store_misses.pl - like dtlb_misses.pl, but for TLB misses during store
+  operations, rather than TLB misses during load operations.
